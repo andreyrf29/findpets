@@ -1,0 +1,2 @@
+class Comunicado < ApplicationRecord
+end
