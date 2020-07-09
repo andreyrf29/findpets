@@ -22,4 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+*Page home: http://www.localhost:3000/home/index
+
+*Animais -> http://www.localhost:3000/animals
+
+*Proprietarios -> http://www.localhost:3000/proprietarios
+
+*Comunicados -> http://www.localhost:3000/comunicados
+
+GitHub
+User:andrey.github29@gmail.com
+Pass:github29
+
 "# findpets" 
