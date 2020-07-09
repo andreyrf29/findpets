@@ -28,7 +28,7 @@ class AnimalsController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        format.html { redirect_to @animal, notice: 'Animal was successfully created.' }
+        format.html { redirect_to @animal, notice: 'Pet salvo com sucesso.' }
         format.json { render :show, status: :created, location: @animal }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AnimalsController < ApplicationController
   def update
     respond_to do |format|
       if @animal.update(animal_params)
-        format.html { redirect_to @animal, notice: 'Animal was successfully updated.' }
+        format.html { redirect_to @animal, notice: 'Pet atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @animal }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AnimalsController < ApplicationController
   def destroy
     @animal.destroy
     respond_to do |format|
-      format.html { redirect_to animals_url, notice: 'Animal was successfully destroyed.' }
+      format.html { redirect_to animals_url, notice: 'Pet excluido com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class AnimalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def animal_params
-      params.require(:animal).permit(:nome, :idade, :foto, :informacoes, :cidade_desap, :uf_desap, :status)
+      params.require(:animal).permit(:nome, :idade, :foto, :informacoes, :cidade_desap, :uf_desap, :status, :image)
     end
 end

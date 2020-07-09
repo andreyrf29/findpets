@@ -9,8 +9,8 @@
       <th>Nome</th>
       <th>Idade</th>
       <th>Informacoes</th>
-      <th>Cidade desap</th>
-      <th>Uf desap</th>
+      <th>Cidade</th>
+      <th>Uf</th>
       <th>Status</th>
       <th colspan="3"></th>
     </tr>
@@ -19,16 +19,22 @@
   <tbody>
     <% @animals.each do |animal| %>
       <tr>
-        <td><%= animal.foto %></td>        
+        <td><%= image_tag(animal.image) %></td>        
         <td><%= animal.nome %></td>
         <td><%= animal.idade %></td>
         <td><%= animal.informacoes %></td>
         <td><%= animal.cidade_desap %></td>
         <td><%= animal.uf_desap %></td>
-        <td><%= animal.status %></td>
+        <td><%= if animal.status == 1
+            'Perdido'
+              elsif @animal.status == 2
+                'Comunicado'
+              else
+                'Encontrado'                
+          end %></td>
         <td><%= link_to 'Show', animal %></td>
         <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Tem certeza ?' } %></td>
       </tr>
     <% end %>
   </tbody>

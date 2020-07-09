@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div style="width:300px; height: auto" class="img-thumbnail">
+  <%= link_to image_tag(@animal.image, style:'width=100%'), animals_path %>
+</div>
+
 <p>
   <strong>Nome:</strong>
   <%= @animal.nome %>
@@ -10,10 +14,6 @@
   <%= @animal.idade %>
 </p>
 
-<p>
-  <strong>Foto:</strong>
-  <%= @animal.foto %>
-</p>
 
 <p>
   <strong>Informacoes:</strong>
@@ -32,7 +32,13 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @animal.status %>
+  <%= if @animal.status == 1
+        'Perdido'
+      elsif @animal.status == 2
+        'Comunicado'
+      else
+        'Encontrado'                
+  end  %>
 </p>
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |

@@ -1,0 +1,64 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+      	<% @animals.each do |animal| %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm text-center">
+          	<div style="width:100%; height: 100%" class="img-thumbnail">
+            	<%= image_tag(animal.image) %>
+        	</div>
+            <div class="card-body">
+		        <h1 class="card-title pricing-card-title"><%= animal.nome %></h1>
+		        <ul class="list-unstyled mt-3 mb-4">
+		          <li>Idade: <%= animal.idade %></li>
+		          <li><%= animal.informacoes %></li>
+		        </ul>
+		        <button type="button" class="btn btn-lg btn-block btn-outline-primary" id="btnFind" attr-id-find="<%= animal.id %>" data-toggle="modal" data-target="#mdlFindpet">Encontrei</button>
+		    </div>
+          </div>
+        </div>
+		<% end %>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="mdlFindpet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 700px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    Informe seus dados
+                </h2>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label id="nomeLocal"><b>Nome:</b></label>
+                        <input type="text" name="nomeLocal" class="form-control" maxlength="30" textstyle="width: 100%;" autocomplete="off">
+                    </div>
+                    <div class="col-md-12">
+                        <label id="foneLocal"><b>Telefone:</b></label>
+                        <input type="text" name="foneLocal" class="form-control" maxlength="30" textstyle="width: 100%;" autocomplete="off">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" name="btnUtilizarPet" id="btnUtilizarPet" class="btn btn-primary">ENVIAR</button>
+                <button type="button" name="btnCancelarPet" id="btnCancelarPet" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->  
+
+<script type="text/javascript">
+	$('#btnFind').on('click', function(e) {
+	  // Apesenta o modal na tela
+	  $('#mdlFindpet').on('shown.bs.modal', function () {
+		  $('#nomeLocal').trigger('focus')
+		});
+	});
+</script>

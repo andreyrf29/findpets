@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :foto %>
-    <%= form.text_field :foto %>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.number_field :status %>
+    <%= form.select(:status, options_for_select([['Perdido', 1], ['Comunicado', 2], ['Encontrado', 3]])) %>
   </div>
 
   <div class="actions">
