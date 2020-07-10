@@ -23,16 +23,17 @@ Things you may want to cover:
 
 * ...
 
-*Page home: http://www.localhost:3000/home/index
+*Cloud heroku
+*Page home: https://foundpets.herokuapp.com/home/index
 
-*Animais -> http://www.localhost:3000/animals
+*Animais -> https://foundpets.herokuapp.com/animals
 
-*Proprietarios -> http://www.localhost:3000/proprietarios
+*Proprietarios -> https://foundpets.herokuapp.com/proprietarios
 
-*Comunicados -> http://www.localhost:3000/comunicados
+*Comunicados -> https://foundpets.herokuapp.com/comunicados
 
-GitHub
-User:andrey.github29@gmail.com
-Pass:github29
+*GitHub
+*User:andrey.github29@gmail.com
+*Pass:github29
 
 "# findpets" 
