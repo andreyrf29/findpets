@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 *Cloud heroku
-*Page home: https://foundpets.herokuapp.com/home/index
+*Home page: https://foundpets.herokuapp.com/home/index
 
 *Animais -> https://foundpets.herokuapp.com/animals
 
