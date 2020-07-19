@@ -32,8 +32,4 @@ Things you may want to cover:
 
 *Comunicados -> https://foundpets.herokuapp.com/comunicados
 
-*GitHub
-*User:andrey.github29@gmail.com
-*Pass:github29
-
 "# findpets" 
